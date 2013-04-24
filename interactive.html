@@ -1,0 +1,45 @@
+<!DOCTYPE html >
+<html >
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>My Amazing Interactive Javascript Site</title>
+    <script type="text/javascript" src="x3dom.js"></script>
+  </head>
+
+  <body>
+    <x3d xmlns="http://www.x3dom.org/x3dom" showStat="false" showLog="false" x="0px" y="0px" width="400px" height="400px" altImg="helloX3D-alt.png">
+      <scene>
+        <viewpoint position='0 0 10' >
+        </viewpoint>
+        <scene render="true" pickmode="idBuf" dopickpass="true" sorttrans="true" frustumculling="true">
+        </scene>
+      </scene>
+    </x3d>
+
+    <script>
+      function addCone() {
+        var scene = document.getElementsByTagName("scene")[0];
+
+        var cone = document.createElement("cone");
+        var shape = document.createElement("shape");
+        var appearance = document.createElement("appearance");
+        var material = document.createElement("material");
+
+        appearance.appendChild(material);
+        shape.appendChild(appearance);
+        shape.appendChild(cone);
+        scene.appendChild(shape);
+        return true;
+      }
+    </script>
+
+
+    <div id="content">
+      <form>
+        <button onclick="addCone()">Add Cone</button>
+      </form>
+    </div>
+
+  </body>
+</html>

@@ -18,10 +18,12 @@
     </x3d>
 
     <script>
-      function addCone(x, y, z) {
+      function addShape(x, y, z) {
         var scene = document.getElementsByTagName("scene")[1];
 
-        var cone = document.createElement("cone");
+        var shapes = ["cone", "sphere", "box"];
+
+        var cone = document.createElement(shapes[Math.floor(Math.random() * shapes.length)]);
         var shape = document.createElement("shape");
         var appearance = document.createElement("appearance");
         var material = document.createElement("material");
@@ -44,7 +46,7 @@
 
     <div id="content">
 
-        <button onclick="addCone(Math.random() * 10, Math.random() * 10, Math.random() * 10)">Add Cone</button>
+        <button onclick="addShape(Math.random() * 10, Math.random() * 10, Math.random() * 10)">Add Shape</button>
 
     </div>
 

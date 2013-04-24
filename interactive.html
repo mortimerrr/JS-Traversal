@@ -8,7 +8,7 @@
   </head>
 
   <body>
-    <x3d xmlns="http://www.x3dom.org/x3dom" showStat="false" showLog="false" x="0px" y="0px" width="400px" height="400px" altImg="helloX3D-alt.png">
+    <x3d xmlns="http://www.x3dom.org/x3dom" showStat="false" showLog="false" x="0px" y="0px" width="800px" height="600px" altImg="helloX3D-alt.png">
       <scene>
         <viewpoint position='0 0 10' >
         </viewpoint>
@@ -18,27 +18,34 @@
     </x3d>
 
     <script>
-      function addCone() {
-        var scene = document.getElementsByTagName("scene")[0];
+      function addCone(x, y, z) {
+        var scene = document.getElementsByTagName("scene")[1];
 
         var cone = document.createElement("cone");
         var shape = document.createElement("shape");
         var appearance = document.createElement("appearance");
         var material = document.createElement("material");
+        var transform = document.createElement("transform");
+        var t = "" + x + " " + y +  " " + z;
+        transform.setAttribute("translation", t);
 
         appearance.appendChild(material);
         shape.appendChild(appearance);
         shape.appendChild(cone);
-        scene.appendChild(shape);
-        return true;
+        transform.appendChild(shape);
+        scene.appendChild(transform);
+
+        console.log(t);
+
+        return false;
       }
     </script>
 
 
     <div id="content">
-      <form>
-        <button onclick="addCone()">Add Cone</button>
-      </form>
+
+        <button onclick="addCone(Math.random() * 10, Math.random() * 10, Math.random() * 10)">Add Cone</button>
+
     </div>
 
   </body>

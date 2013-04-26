@@ -27,11 +27,14 @@
         var shape = document.createElement("shape");
         var appearance = document.createElement("appearance");
         var material = document.createElement("material");
+        var imageTexture = document.createElement("imageTexture");
+        imageTexture.setAttribute("url", '"file:///Users/daniel/projects/jscarousel/flowers5.jpg"');
         var transform = document.createElement("transform");
         var t = "" + x + " " + y +  " " + z;
         transform.setAttribute("translation", t);
 
         appearance.appendChild(material);
+        appearance.appendChild(imageTexture);
         shape.appendChild(appearance);
         shape.appendChild(cone);
         transform.appendChild(shape);

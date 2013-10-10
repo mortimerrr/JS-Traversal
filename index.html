@@ -7,25 +7,25 @@
   <script type="text/javascript" src="x3dom.js"></script>
 </head>
 
-<body>
+<body style="text-align: center">
 
  <h1>Hello 3D</h1>
 
- <x3d xmlns="http://www.x3dom.org/x3dom" showStat="false" showLog="false" x="0px" y="0px" width="400px" height="400px" altImg="helloX3D-alt.png">
+ <x3d xmlns="http://www.x3dom.org/x3dom" showStat="false" showLog="false" x="0px" y="0px" width="800px" height="600px" altImg="helloX3D-alt.png">
   <scene>
     <viewpoint position='0 0 10' ></viewpoint>
-    <scene render="true" pickmode="idBuf" dopickpass="true" sorttrans="true" frustumculling="true">
+    <scene id="scene" render="true" pickmode="idBuf" dopickpass="true" sorttrans="true" frustumculling="true">
 
-      <shape render="true" ispickable="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1">
+     <!--  <shape render="true" ispickable="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1">
         <appearance>
           <material diffuseColor='0.603 0.894 0.909' ></material>
         </appearance>
-        <box def="box" solid="true" ccw="true" usegeocache="true" size="5,5,0">
+        <box def="box" solid="true" ccw="true" usegeocache="true" size="5,5,5">
 
         </box>
-      </shape>
+      </shape> -->
 
-      <shape render="true" ispickable="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1">
+      <!-- <shape render="true" ispickable="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1">
 
         <appearance>
           <material diffuseColor='0.603 0.894 0.909' ></material>
@@ -33,7 +33,7 @@
         <cone solid="true" ccw="true" usegeocache="true" bottomradius="1" height="2" bottom="true" subdivision="32" side="true">
 
         </cone>
-      </shape>
+      </shape> -->
     </scene>
   </x3d>
 </body>

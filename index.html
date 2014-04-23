@@ -75,21 +75,21 @@
       transform.setAttribute('translation', randomArray);
       transform.appendChild(shape);
       scene.appendChild(transform);
-      // transform.setAttribute('translation', '1,2,1');
-
     }
 
-         function randomShape() {
-        var x = Math.random() * 3;
-        if(x<=1) {
-          return 'box';
-        } else if((x>1)&&(x<=2)) {
-          return 'cone'; 
-        } else {
-          return 'sphere';
-        } 
-      }
-      
+    function randomShape() {
+      var x = Math.random() * 3;
+      var result;
+      if(x<=1) {
+        result = 'box';
+      } else if((x>1)&&(x<=2)) {
+        result = 'cone'; 
+      } else {
+        result = 'sphere';
+      } 
+      return result;
+    }
+
   </script>
 
   <button onclick="addShape(randomShape());">Click Me!</button>

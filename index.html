@@ -41,19 +41,16 @@
 
     function addShape() {
       console.log("addShape");
-      scene = document.getElementById('scene');
-      shape = document.createElement('shape');
-      appearance = document.createElement('appearance');
-      material = document.createElement('material');
-      box = document.createElement('box');
+      var scene = document.getElementById('scene');
+      var shape = document.createElement('shape');
+      var appearance = document.createElement('appearance');
+      var material = document.createElement('material');
+      var box = document.createElement('box');
       appearance.appendChild(material);
       shape.appendChild(appearance);
       shape.appendChild(box);
       box.setAttribute('size', '3,2,3');
-      scene.appendChild(shape);
     }
-
-
   </script>
 
   <button onclick="addShape()">Click Me!</button>

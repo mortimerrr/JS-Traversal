@@ -39,7 +39,21 @@
 
   <script type="text/javascript">
 
-    function addShape() {
+    function addShape(shape) {
+      
+
+      switch (shape) {
+        case 'box':
+          console.log('box');
+          break;
+        case 'cone':
+          console.log('cone');
+          break;
+        case 'sphere':
+          console.log('sphere');
+          break;
+      }
+
       console.log("addShape");
       var scene = document.getElementById('scene');
       var shape = document.createElement('shape');
@@ -53,10 +67,10 @@
       var transform = document.createElement('transform');
       transform.appendChild(shape);
       scene.appendChild(transform);
-      transform.setAttribute('translation', '1,1,1');
+      transform.setAttribute('translation', '1,5,1');
     }
   </script>
 
-  <button onclick="addShape()">Click Me!</button>
+  <button onclick="addShape('cone')">Click Me!</button>
 </body>
 </html>

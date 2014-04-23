@@ -41,16 +41,20 @@
 
     function addShape(shape) {
       
+      var typeOfShape;
 
       switch (shape) {
         case 'box':
           console.log('box');
+          typeOfShape = document.createElement('box');
           break;
         case 'cone':
           console.log('cone');
+          typeOfShape = document.createElement('cone');
           break;
         case 'sphere':
           console.log('sphere');
+          typeOfShape = document.createElement('sphere');
           break;
       }
 
@@ -59,15 +63,14 @@
       var shape = document.createElement('shape');
       var appearance = document.createElement('appearance');
       var material = document.createElement('material');
-      var box = document.createElement('box');
       appearance.appendChild(material);
       shape.appendChild(appearance);
-      shape.appendChild(box);
-      box.setAttribute('size', '3,2,3');
+      shape.appendChild(typeOfShape);
+      typeOfShape.setAttribute('size', '3,2,3');
       var transform = document.createElement('transform');
       transform.appendChild(shape);
       scene.appendChild(transform);
-      transform.setAttribute('translation', '1,5,1');
+      transform.setAttribute('translation', '1,2,1');
     }
   </script>
 

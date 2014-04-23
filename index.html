@@ -66,14 +66,19 @@
       appearance.appendChild(material);
       shape.appendChild(appearance);
       shape.appendChild(typeOfShape);
-      typeOfShape.setAttribute('size', '3,2,3');
+      var randomNumber1 = Math.random() *5;
+      var randomNumber2 = Math.random() *5;
+      var randomNumber3 = Math.random() *5;
+      var randomArray = [randomNumber1, randomNumber2, randomNumber3].join(',');
+      console.log(randomArray);
       var transform = document.createElement('transform');
+      transform.setAttribute('translation', randomArray);
       transform.appendChild(shape);
       scene.appendChild(transform);
-      transform.setAttribute('translation', '1,2,1');
+      // transform.setAttribute('translation', '1,2,1');
     }
   </script>
 
-  <button onclick="addShape('cone')">Click Me!</button>
+  <button onclick="addShape('sphere')">Click Me!</button>
 </body>
 </html>

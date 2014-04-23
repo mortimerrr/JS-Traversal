@@ -50,6 +50,10 @@
       shape.appendChild(appearance);
       shape.appendChild(box);
       box.setAttribute('size', '3,2,3');
+      var transform = document.createElement('transform');
+      transform.appendChild(shape);
+      scene.appendChild(transform);
+      transform.setAttribute('translation', '1,1,1');
     }
   </script>
 

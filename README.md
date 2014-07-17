@@ -1,4 +1,5 @@
-#### An exercise on adding X3D objects to HTML with JavaScript.
+#### An exercise on adding X3D objects to HTML with JavaScript.  
+This was done at the Full-Stack Ruby Web Development course at We Got Coders. (wegotcoders.com)
 
 We were practicing the following JavaScript methods:
 
@@ -14,4 +15,3 @@ We were practicing the following JavaScript methods:
 Open index.html in your favourite browser.  
 Click on click me button (bottom-right) a few times to add random 3D shapes.  
 Drag them with a mouse to rotate them in 3D.
-
